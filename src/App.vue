@@ -1,9 +1,7 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import { onBeforeMount } from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
-import { useOauthStore } from "@/store/oauth";
+import { useOauthStore } from "@/store/oauth.ts";
 
 const oauthStore = useOauthStore();
 onBeforeMount(() => {
@@ -16,6 +14,7 @@ onBeforeMount(() => {
   <HelloWorld
     msg="Hello Vue 3 + TypeScript + Vite + Vitest + Quasar + Pinia 🍍"
   />
+  <pulse-loader></pulse-loader>
   <router-view />
 </template>
 
