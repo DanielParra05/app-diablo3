@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { onBeforeMount } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
-import { useOauthStore } from "@/store/oauth.ts";
+import { useOauthStore } from "@/store/oauth";
 
 const oauthStore = useOauthStore();
 onBeforeMount(() => {
@@ -10,21 +9,15 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld
-    msg="Hello Vue 3 + TypeScript + Vite + Vitest + Quasar + Pinia 🍍"
-  />
-  <pulse-loader></pulse-loader>
   <router-view />
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="stylus">
+#app
+  padding 60px 0
+  font-family 'Avenir', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  color #ffffff // Le ponemos un color de letra blanco para que resalte
+  background-color #15202b // Le cambiamos el color de fondo por un azul marino oscuro
 </style>
