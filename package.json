@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
     "@quasar/extras": "^1.13.3",
@@ -22,7 +23,10 @@
   "devDependencies": {
     "@pinia/testing": "^0.0.10",
     "@quasar/vite-plugin": "^1.0.7",
+    "@typescript-eslint/parser": "^5.17.0",
     "@vitejs/plugin-vue": "^2.2.0",
+    "eslint": "^8.12.0",
+    "eslint-plugin-vue": "^8.5.0",
     "happy-dom": "^2.50.0",
     "sass": "^1.32.0",
     "typescript": "^4.5.4",
