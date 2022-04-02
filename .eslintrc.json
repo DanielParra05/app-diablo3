@@ -4,8 +4,9 @@
         "es2021": true
     },
     "extends": [
+        "plugin:vue/vue3-recommended",
         "eslint:recommended",
-        "plugin:vue/vue3-recommended"
+        "@vue/prettier"
     ],
     "parserOptions": {
         "parser": "@typescript-eslint/parser",
