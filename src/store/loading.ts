@@ -2,13 +2,17 @@ import { defineStore } from 'pinia'
 
 // useStore could be anything like useUser, useCart
 // the first argument is a unique id of the store across your application
-export const useSampleStore = defineStore('sampleStore', {
+export const useLoadingStore = defineStore('loadingStore', {
   state: () => ({
-    appName: "Vue App",
-    count: 0
+    loading: false,
   }),
 
+  actions: {
+    toggleLoading() {
+      this.loading = !this.loading;
+    }
+  },
   getters: {
-    getAppName: (state) => state.appName
+    isLoading: (state) => state.loading
   }
 })

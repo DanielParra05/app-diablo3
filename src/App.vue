@@ -1,15 +1,24 @@
 <script setup lang="ts">
 import { onBeforeMount } from "vue";
 import { useOauthStore } from "@/store/oauth";
+import MainLayout from "./layouts/MainLayout.vue";
+import LoadingLayout from "./layouts/LoadingLayout.vue";
+import Loading from "./components/Loading.vue";
+import { useLoadingStore } from "./store/loading";
 
 const oauthStore = useOauthStore();
+const loadingStore = useLoadingStore();
+
 onBeforeMount(() => {
   oauthStore.setAccessToken();
 });
 </script>
 
 <template>
-  <router-view />
+  <loading-layout v-if="loadingStore.isLoading">
+    <loading></loading>
+  </loading-layout>
+  <main-layout v-else></main-layout>
 </template>
 
 <style lang="stylus">
