@@ -1,8 +1,6 @@
 import { defineStore } from 'pinia'
 import oauth from '../api/oauth';
 
-// useStore could be anything like useUser, useCart
-// the first argument is a unique id of the store across your application
 export const useOauthStore = defineStore('oauthStore', {
     state: () => ({
         accessToken: ""
