@@ -5,6 +5,7 @@ import router from "./router";
 import App from './App.vue'
 // Import icon libraries
 import '@quasar/extras/material-icons/material-icons.css'
+import './assets/css/main.styl';
 
 // Import Quasar css
 import 'quasar/src/css/index.sass'
